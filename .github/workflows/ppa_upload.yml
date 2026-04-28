@@ -1,0 +1,44 @@
+name: Upload to PPA
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  deploy-ppa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install Packaging Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y debhelper devscripts dupload bazel-6.5.0
+
+      - name: Import GPG Key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Vendor Dependencies
+        run: |
+          bazel fetch //pycoral:wheel
+          mkdir -p vendor_deps
+          cp $(bazel info repository_cache)/* vendor_deps/ 2>/dev/null || true
+
+      - name: Prepare and Upload
+        run: |
+          cat <<EOF > ~/.dput.cf
+          [my-ppa]
+          fqdn = ppa.launchpad.net
+          method = ftp
+          incoming = ~dutch2005/ubuntu/pycoral-modernized/
+          login = anonymous
+          allow_unsigned_uploads = 0
+          EOF
+          
+          debuild -S -sa -kEA420FDED8594882
+          dput my-ppa ../pycoral_*.changes

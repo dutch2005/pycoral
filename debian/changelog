@@ -1,11 +1,7 @@
-coral (2.0.0) stable; urgency=medium
+pycoral (2.0.0-1) noble; urgency=low
 
-  * pycoral grouper release
+  * Modernized build with C++23 and Python 3.12 support.
+  * Statically linked libedgetpu runtime.
+  * Implementation of hermetic vendor-based build for Launchpad compatibility.
 
- -- Coral <coral-support@google.com>  Mon, 28 Jun 2021 14:20:28 -0700
-
-coral (1.0) stable; urgency=medium
-
-  * pycoral initial release
-
- -- Coral <coral-support@google.com>  Thu, 22 Oct 2020 18:12:17 -0700
+ -- Michael Maertzdorf <dutch2005@gmail.com>  Tue, 28 Apr 2026 14:15:00 +0200

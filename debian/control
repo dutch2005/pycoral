@@ -1,28 +1,25 @@
-Source: coral
-Maintainer: Coral <coral-support@google.com>
+Source: python3-coral
 Section: python
 Priority: optional
-Build-Depends: dh-python, python3-setuptools, python3-all, debhelper (>= 9)
-Standards-Version: 3.9.6
-Homepage: https://coral.ai/
+Maintainer: Antigravity Modernization Team <antigravity@example.com>
+Build-Depends: debhelper-compat (= 13),
+               python3-all,
+               python3-setuptools,
+               python3-numpy,
+               python3-wheel,
+               bazel (>= 6.4.0)
+Standards-Version: 4.5.1
+Homepage: https://github.com/google-coral/pycoral
 
-Package: pycoral-examples
-Architecture: all
-Depends: python3-pycoral (= ${binary:Version}),
-         ${misc:Depends}
-Description: Example code for Coral Python API
- Python examples to demonstrate how to use the Coral Python API
-
-Package: python3-pycoral
+Package: python3-coral
 Architecture: any
-Depends: libc6,
-         libedgetpu1-std (= 16.0) | libedgetpu1 (= 16.0),
-         libgcc1,
-         libstdc++6,
-         python3-numpy,
-         python3-pil,
-         python3-tflite-runtime (= 2.5.0.post1),
+Depends: ${python3:Depends},
+         ${shlibs:Depends},
          ${misc:Depends},
-         ${python3:Depends}
-Description: Coral Python API
- Python library for interfacing with the Edge TPU on various Coral products
+         python3-numpy,
+         python3-pillow
+Description: Python API for Edge TPU
+ This package provides a high-level Python API to interact with Edge TPU
+ devices. It supports image classification, object detection, and more.
+ .
+ This version is modernized for Python 3.12+ and Ubuntu 24.04.

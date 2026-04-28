@@ -1,0 +1,76 @@
+name: Release Build
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-wheels:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libusb-1.0-0-dev
+          pip install wheel setuptools numpy
+
+      - name: Build with Bazel
+        run: |
+          export TF_PYTHON_VERSION=${{ matrix.python-version }}
+          ./bazel-6.5.0 build //src:_pywrap_coral.so
+
+      - name: Package Wheel
+        run: |
+          cp bazel-bin/src/_pywrap_coral.so pycoral/pybind/
+          python setup.py bdist_wheel
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pycoral-wheel-${{ matrix.python-version }}
+          path: dist/*.whl
+
+  build-packages:
+    needs: build-wheels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Packaging Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y debhelper devscripts rpm
+
+      - name: Build Debian Package
+        run: |
+          # Build logic for .deb
+          dpkg-buildpackage -us -uc -b
+          mkdir -p output
+          mv ../python3-pycoral*.deb output/
+
+      - name: Build RPM Package
+        run: |
+          # Build logic for .rpm
+          rpmbuild -bb rpm/pycoral.spec
+          mv ~/rpmbuild/RPMS/*/*.rpm output/
+
+      - name: Upload Packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: os-packages
+          path: output/*

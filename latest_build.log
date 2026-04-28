@@ -1,0 +1,1211 @@
+Loading: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //src:_pywrap_coral (1 packages loaded, 0 targets configured)
+WARNING: Download from https://golang.org/dl/?mode=json&include=all failed: class javax.net.ssl.SSLHandshakeException PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+INFO: Analyzed target //src:_pywrap_coral (23 packages loaded, 495 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[9 / 106] Compiling port/default/port_from_tf/logging.cc; 0s linux-sandbox ... (23 actions, 22 running)
+INFO: From Compiling driver/dma_chunker.cc:
+In file included from external/libedgetpu/driver/dma_chunker.cc:15:
+external/libedgetpu/driver/dma_chunker.h: In member function 'bool platforms::darwinn::driver::DmaChunker::HasNextChunk() const':
+external/libedgetpu/driver/dma_chunker.h:54:33: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+   54 |     return GetNextChunkOffset() < buffer_.size_bytes();
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/dma_chunker.h: In member function 'int platforms::darwinn::driver::DmaChunker::GetActiveCounts(int) const':
+external/libedgetpu/driver/dma_chunker.h:79:37: warning: comparison of integer expressions of different signedness: 'int' and 'const size_t' {aka 'const long unsigned int'} [-Wsign-compare]
+   79 |     return floor + ((floor * bytes) < active_bytes_);
+      |                     ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+external/libedgetpu/driver/dma_chunker.cc: In member function 'int platforms::darwinn::driver::DmaChunker::GetNextChunkOffset() const':
+external/libedgetpu/driver/dma_chunker.cc:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+   74 | }
+      | ^
+[14 / 106] Compiling port/default/status_macros.cc; 2s linux-sandbox ... (23 actions, 22 running)
+INFO: From Compiling driver/memory/mmu_mapper.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/memory/mmu_mapper.h:18,
+                 from external/libedgetpu/driver/memory/mmu_mapper.cc:15:
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+INFO: From Compiling driver/memory/mmio_address_space.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/memory/mmio_address_space.h:22,
+                 from external/libedgetpu/driver/memory/mmio_address_space.cc:15:
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+INFO: From Compiling driver/kernel/linux/kernel_event_linux.cc:
+external/libedgetpu/driver/kernel/linux/kernel_event_linux.cc: In member function 'void platforms::darwinn::driver::KernelEventLinux::Monitor(const platforms::darwinn::driver::KernelEvent::Handler&)':
+external/libedgetpu/driver/kernel/linux/kernel_event_linux.cc:79:25: warning: comparison of integer expressions of different signedness: 'int' and 'uint64_t' {aka 'long unsigned int'} [-Wsign-compare]
+   79 |       for (int i = 0; i < num_events; ++i) {
+      |                       ~~^~~~~~~~~~~~
+[24 / 106] Compiling driver/memory/buddy_address_space.cc; 2s linux-sandbox ... (24 actions, 23 running)
+INFO: From Compiling driver/memory/buddy_address_space.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/memory/buddy_address_space.h:22,
+                 from external/libedgetpu/driver/memory/buddy_address_space.cc:15:
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+INFO: From Compiling driver/usb/usb_io_request.cc:
+In file included from external/libedgetpu/driver/usb/usb_io_request.h:21,
+                 from external/libedgetpu/driver/usb/usb_io_request.cc:15:
+external/libedgetpu/driver/dma_chunker.h: In member function 'bool platforms::darwinn::driver::DmaChunker::HasNextChunk() const':
+external/libedgetpu/driver/dma_chunker.h:54:33: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+   54 |     return GetNextChunkOffset() < buffer_.size_bytes();
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/dma_chunker.h: In member function 'int platforms::darwinn::driver::DmaChunker::GetActiveCounts(int) const':
+external/libedgetpu/driver/dma_chunker.h:79:37: warning: comparison of integer expressions of different signedness: 'int' and 'const size_t' {aka 'const long unsigned int'} [-Wsign-compare]
+   79 |     return floor + ((floor * bytes) < active_bytes_);
+      |                     ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+[30 / 106] Compiling driver/memory/buddy_allocator.cc; 4s linux-sandbox ... (24 actions running)
+INFO: From Compiling driver/memory/buddy_allocator.cc:
+In file included from external/com_google_absl/absl/base/port.h:21,
+                 from external/com_google_absl/absl/strings/internal/str_format/arg.h:31,
+                 from external/com_google_absl/absl/strings/str_format.h:78,
+                 from external/libedgetpu/driver/memory/buddy_allocator.cc:17:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/driver/memory/address_space_allocator.h:19,
+                 from external/libedgetpu/driver/memory/buddy_allocator.h:23,
+                 from external/libedgetpu/driver/memory/buddy_allocator.cc:15:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/driver/memory/buddy_allocator.cc: In constructor 'platforms::darwinn::driver::BuddyAllocator::BuddyAllocator(platforms::darwinn::uint64, platforms::darwinn::uint64)':
+external/libedgetpu/driver/memory/buddy_allocator.cc:96:41: warning: comparison of integer expressions of different signedness: 'int' and 'const platforms::darwinn::uint64' {aka 'const long long unsigned int'} [-Wsign-compare]
+   96 |   for (int i = kAddressSpaceBits - 1; i >= kHostPageShiftBits; --i) {
+      |                                       ~~^~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/memory/buddy_allocator.cc: In member function 'virtual platforms::darwinn::StatusOr<long long unsigned int> platforms::darwinn::driver::BuddyAllocator::Allocate(platforms::darwinn::uint64)':
+external/libedgetpu/driver/memory/buddy_allocator.cc:116:22: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::set<long long unsigned int> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  116 |   while (nearest_bin < free_blocks_.size() &&
+      |          ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/memory/buddy_allocator.cc:120:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::set<long long unsigned int> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  120 |   if (nearest_bin >= free_blocks_.size()) {
+      |       ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/memory/buddy_allocator.cc: In member function 'virtual platforms::darwinn::Status platforms::darwinn::driver::BuddyAllocator::Free(platforms::darwinn::uint64, platforms::darwinn::uint64)':
+external/libedgetpu/driver/memory/buddy_allocator.cc:157:39: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::set<long long unsigned int> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  157 |   for (int buddy_bin = bin; buddy_bin < free_blocks_.size(); ++buddy_bin) {
+      |                             ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h: In instantiation of 'std::string* platforms::darwinn::internal::Check_GEImpl(const T1&, const T2&, const char*) [with T1 = int; T2 = long long unsigned int; std::string = std::__cxx11::basic_string<char>]':
+external/libedgetpu/driver/memory/buddy_allocator.cc:52:3:   required from here
+external/libedgetpu/port/default/port_from_tf/logging.h:241:32: warning: comparison of integer expressions of different signedness: 'const int' and 'const long long unsigned int' [-Wsign-compare]
+  241 | DEFINE_CHECK_OP_IMPL(Check_GE, >=)
+external/libedgetpu/port/default/port_from_tf/macros.h:102:26: note: in definition of macro 'PREDICT_TRUE'
+  102 | #define PREDICT_TRUE(x) (x)
+      |                          ^
+external/libedgetpu/port/default/port_from_tf/logging.h:241:1: note: in expansion of macro 'DEFINE_CHECK_OP_IMPL'
+  241 | DEFINE_CHECK_OP_IMPL(Check_GE, >=)
+      | ^~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+INFO: From Compiling driver/usb/usb_dfu_commands.cc:
+external/libedgetpu/driver/usb/usb_dfu_commands.cc: In member function 'platforms::darwinn::Status platforms::darwinn::driver::UsbDfuCommands::ValidateFirmware(const DfuFunctionalDescriptor&, platforms::darwinn::driver::UsbStandardCommands::ConstBuffer)':
+external/libedgetpu/driver/usb/usb_dfu_commands.cc:487:8: warning: variable 'short_packet_received' set but not used [-Wunused-but-set-variable]
+  487 |   bool short_packet_received = false;
+      |        ^~~~~~~~~~~~~~~~~~~~~
+INFO: From Compiling driver/kernel/kernel_mmu_mapper.cc:
+external/libedgetpu/driver/kernel/kernel_mmu_mapper.cc: In function 'uint32_t platforms::darwinn::driver::DirectionFlag(DmaDirection)':
+external/libedgetpu/driver/kernel/kernel_mmu_mapper.cc:91:1: warning: control reaches end of non-void function [-Wreturn-type]
+   91 | }
+      | ^
+INFO: From Compiling api/watchdog.cc:
+external/libedgetpu/api/watchdog.cc: In constructor 'platforms::darwinn::api::CascadeWatchdog::CascadeWatchdog(const std::vector<Config>&, WatchdogMaker)':
+external/libedgetpu/api/watchdog.cc:266:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::api::CascadeWatchdog::Config>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  266 |   for (int i = 0; i < configs.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~
+external/libedgetpu/api/watchdog.cc: In member function 'void platforms::darwinn::api::CascadeWatchdog::WatchdogExpired(platforms::darwinn::int64, int)':
+external/libedgetpu/api/watchdog.cc:297:25: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<platforms::darwinn::api::Watchdog> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  297 |   if (currently_active_ < watchdogs_.size() - 1) {
+      |       ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/watchdog.cc: In member function 'platforms::darwinn::Status platforms::darwinn::api::CascadeWatchdog::UpdateTimeout(int, platforms::darwinn::int64)':
+external/libedgetpu/api/watchdog.cc:359:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<platforms::darwinn::api::Watchdog> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  359 |   if (child_index >= watchdogs_.size()) {
+      |       ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/watchdog.h:25,
+                 from external/libedgetpu/api/watchdog.cc:15:
+external/libedgetpu/port/default/port_from_tf/logging.h: In instantiation of 'std::string* platforms::darwinn::internal::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long long unsigned int; T2 = int; std::string = std::__cxx11::basic_string<char>]':
+external/libedgetpu/api/watchdog.cc:160:5:   required from here
+external/libedgetpu/port/default/port_from_tf/logging.h:237:32: warning: comparison of integer expressions of different signedness: 'const long long unsigned int' and 'const int' [-Wsign-compare]
+  237 | DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+external/libedgetpu/port/default/port_from_tf/macros.h:102:26: note: in definition of macro 'PREDICT_TRUE'
+  102 | #define PREDICT_TRUE(x) (x)
+      |                          ^
+external/libedgetpu/port/default/port_from_tf/logging.h:237:1: note: in expansion of macro 'DEFINE_CHECK_OP_IMPL'
+  237 | DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+      | ^~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/watchdog.cc: In member function 'virtual platforms::darwinn::Status platforms::darwinn::api::TimerFdWatchdog::Signal()':
+external/libedgetpu/api/watchdog.cc:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+  120 | }
+      | ^
+external/libedgetpu/api/watchdog.cc: In member function 'virtual platforms::darwinn::Status platforms::darwinn::api::TimerFdWatchdog::Deactivate()':
+external/libedgetpu/api/watchdog.cc:137:1: warning: control reaches end of non-void function [-Wreturn-type]
+  137 | }
+      | ^
+INFO: From Compiling tflite/edgetpu_delegate_for_custom_op_tflite_plugin.cc:
+external/libedgetpu/tflite/edgetpu_delegate_for_custom_op_tflite_plugin.cc: In function 'std::shared_ptr<edgetpu::EdgeTpuContext> {anonymous}::GetEdgeTpuContext(std::optional<edgetpu::DeviceType>, std::optional<int>, const edgetpu::EdgeTpuManager::DeviceOptions&)':
+external/libedgetpu/tflite/edgetpu_delegate_for_custom_op_tflite_plugin.cc:59:17: warning: comparison of integer expressions of different signedness: 'const int' and 'std::vector<edgetpu::EdgeTpuManager::DeviceEnumerationRecord>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   59 |       if (index < tpus.size())
+      |           ~~~~~~^~~~~~~~~~~~~
+[42 / 106] Compiling driver/usb/local_usb_device.cc; 5s linux-sandbox ... (24 actions running)
+INFO: From Compiling driver/interrupt/grouped_interrupt_controller.cc:
+external/libedgetpu/driver/interrupt/grouped_interrupt_controller.cc: In member function 'virtual platforms::darwinn::Status platforms::darwinn::driver::GroupedInterruptController::ClearInterruptStatus(int)':
+external/libedgetpu/driver/interrupt/grouped_interrupt_controller.cc:51:10: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<platforms::darwinn::driver::InterruptControllerInterface> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   51 |   if (id < interrupt_controllers_.size()) {
+      |       ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO: From Compiling driver/dma_info_extractor.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/driver/package_registry.h:28,
+                 from external/libedgetpu/driver/dma_info_extractor.h:22,
+                 from external/libedgetpu/driver/dma_info_extractor.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/device_buffer_mapper.h:21,
+                 from external/libedgetpu/driver/dma_info_extractor.h:20:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+external/libedgetpu/driver/dma_info_extractor.cc: In member function 'virtual std::__cxx11::list<platforms::darwinn::driver::DmaInfo> platforms::darwinn::driver::DmaInfoExtractor::ExtractDmaInfos(const platforms::darwinn::driver::ExecutableReference&, const platforms::darwinn::driver::DeviceBufferMapper&) const':
+external/libedgetpu/driver/dma_info_extractor.cc:43:1: warning: control reaches end of non-void function [-Wreturn-type]
+   43 | }
+      | ^
+[47 / 106] Compiling driver/usb/local_usb_device.cc; 6s linux-sandbox ... (24 actions, 23 running)
+INFO: From Compiling driver/dma_info.cc:
+external/libedgetpu/driver/dma_info.cc: In member function 'std::string platforms::darwinn::driver::DmaInfo::Dump() const':
+external/libedgetpu/driver/dma_info.cc:78:1: warning: control reaches end of non-void function [-Wreturn-type]
+   78 | }
+      | ^
+external/libedgetpu/driver/dma_info.cc: In function 'std::string platforms::darwinn::driver::{anonymous}::ToString(platforms::darwinn::driver::DmaState)':
+external/libedgetpu/driver/dma_info.cc:39:1: warning: control reaches end of non-void function [-Wreturn-type]
+   39 | }
+      | ^
+INFO: From Compiling driver/aligned_allocator.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/allocator.h:20,
+                 from external/libedgetpu/driver/aligned_allocator.h:20,
+                 from external/libedgetpu/driver/aligned_allocator.cc:15:
+external/libedgetpu/port/default/port_from_tf/logging.h: In instantiation of 'std::string* platforms::darwinn::internal::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long long unsigned int; T2 = int; std::string = std::__cxx11::basic_string<char>]':
+external/libedgetpu/driver/aligned_allocator.cc:31:3:   required from here
+external/libedgetpu/port/default/port_from_tf/logging.h:237:32: warning: comparison of integer expressions of different signedness: 'const long long unsigned int' and 'const int' [-Wsign-compare]
+  237 | DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+external/libedgetpu/port/default/port_from_tf/macros.h:102:26: note: in definition of macro 'PREDICT_TRUE'
+  102 | #define PREDICT_TRUE(x) (x)
+      |                          ^
+external/libedgetpu/port/default/port_from_tf/logging.h:237:1: note: in expansion of macro 'DEFINE_CHECK_OP_IMPL'
+  237 | DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+      | ^~~~~~~~~~~~~~~~~~~~
+INFO: From Compiling driver/usb/local_usb_device.cc:
+external/libedgetpu/driver/usb/local_usb_device.cc: In member function 'virtual platforms::darwinn::StatusOr<std::unique_ptr<platforms::darwinn::driver::UsbDeviceInterface> > platforms::darwinn::driver::LocalUsbDeviceFactory::OpenDevice(const std::string&, platforms::darwinn::driver::UsbDeviceFactory::TimeoutMillis)':
+external/libedgetpu/driver/usb/local_usb_device.cc:1064:31: warning: comparison of integer expressions of different signedness: 'const int' and 'std::vector<unsigned char>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+ 1064 |     } else if (depth_or_error == parsed_path.port_numbers.size()) {
+      |                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO: From Compiling driver/driver_factory_default.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/driver/driver_factory.h:25,
+                 from external/libedgetpu/driver/driver_factory_default.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling tflite/custom_op_data.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/logging.h:18,
+                 from external/libedgetpu/port/default/status_macros.h:25,
+                 from external/libedgetpu/port/status_macros.h:24,
+                 from external/libedgetpu/tflite/custom_op_data.cc:23:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: warning: "ABSL_MUST_USE_RESULT" redefined
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+In file included from external/com_google_absl/absl/base/port.h:21,
+                 from external/com_google_absl/absl/strings/internal/str_format/arg.h:31,
+                 from external/com_google_absl/absl/strings/str_format.h:78,
+                 from external/libedgetpu/tflite/custom_op_data.cc:21:
+external/com_google_absl/absl/base/attributes.h:450: note: this is the location of the previous definition
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+external/libedgetpu/tflite/custom_op_data.cc: In lambda function:
+external/libedgetpu/tflite/custom_op_data.cc:73:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::tflite::CustomOpWrappedBuffer>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   73 |     for (int i = 1; i < custom_op_data.executables.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/tflite/custom_op_data.cc: In function 'std::unique_ptr<platforms::darwinn::tflite::CustomOpData> platforms::darwinn::tflite::DeserializeCustomOpData(const uint8_t*, size_t)':
+external/libedgetpu/tflite/custom_op_data.cc:131:23: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+  131 |     for (int i = 0; i < chips.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~
+external/libedgetpu/tflite/custom_op_data.cc:146:23: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+  146 |     for (int i = 1; i < chips.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~
+INFO: From Compiling driver/single_queue_dma_scheduler.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/driver/single_queue_dma_scheduler.h:25,
+                 from external/libedgetpu/driver/single_queue_dma_scheduler.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling driver/instruction_buffers.cc:
+external/libedgetpu/driver/instruction_buffers.cc: In member function 'void platforms::darwinn::driver::InstructionBuffers::LinkInstructionBuffers(const platforms::darwinn::driver::DeviceBuffer&, platforms::darwinn::driver::DeviceBufferMapper*, const flatbuffers::Vector<flatbuffers::Offset<platforms::darwinn::InstructionBitstream> >&)':
+external/libedgetpu/driver/instruction_buffers.cc:62:21: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+   62 |   for (int i = 0; i < VectorLength(&instruction_bitstreams); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[66 / 106] Compiling driver/real_time_dma_scheduler.cc; 7s linux-sandbox ... (24 actions, 23 running)
+INFO: From Compiling driver/real_time_dma_scheduler.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/driver/real_time_dma_scheduler.h:26,
+                 from external/libedgetpu/driver/real_time_dma_scheduler.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling driver/driver_factory.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/driver/driver_factory.h:25,
+                 from external/libedgetpu/driver/driver_factory.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling driver/device_buffer_mapper.cc:
+external/libedgetpu/driver/device_buffer_mapper.cc: In member function 'platforms::darwinn::Status platforms::darwinn::driver::DeviceBufferMapper::MapMultiple(const platforms::darwinn::Buffer::NamedMap&, platforms::darwinn::driver::DmaDirection, platforms::darwinn::driver::DeviceBuffer::NamedMap&, std::vector<platforms::darwinn::driver::DeviceBuffer>&)':
+external/libedgetpu/driver/device_buffer_mapper.cc:223:67: warning: format '%d' expects argument of type 'int', but argument 6 has type 'platforms::darwinn::driver::DmaDirection' [-Wformat=]
+  223 |           "Mapped \"%s\" : %s -> 0x%016llx, %zu bytes. Direction=%d",
+      |                                                                  ~^
+      |                                                                   |
+      |                                                                   int
+......
+  227 |           device_buffer.size_bytes(), direction);
+      |                                       ~~~~~~~~~                    
+      |                                       |
+      |                                       platforms::darwinn::driver::DmaDirection
+In file included from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/device_buffer_mapper.h:21,
+                 from external/libedgetpu/driver/device_buffer_mapper.cc:15:
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+INFO: From Compiling driver/memory/dual_address_space.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/memory/address_space.h:21,
+                 from external/libedgetpu/driver/memory/dual_address_space.h:19,
+                 from external/libedgetpu/driver/memory/dual_address_space.cc:15:
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+external/libedgetpu/driver/memory/dual_address_space.cc: In member function 'virtual platforms::darwinn::StatusOr<platforms::darwinn::driver::DeviceBuffer> platforms::darwinn::driver::DualAddressSpace::MapMemory(const platforms::darwinn::Buffer&, platforms::darwinn::driver::DmaDirection, platforms::darwinn::driver::MappingTypeHint)':
+external/libedgetpu/driver/memory/dual_address_space.cc:52:1: warning: control reaches end of non-void function [-Wreturn-type]
+   52 | }
+      | ^
+INFO: From Compiling driver/kernel/kernel_registers.cc:
+In file included from external/com_google_absl/absl/base/port.h:21,
+                 from external/com_google_absl/absl/strings/internal/str_format/arg.h:31,
+                 from external/com_google_absl/absl/strings/str_format.h:78,
+                 from external/libedgetpu/driver/kernel/kernel_registers.cc:24:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/driver_shared/registers.h:19,
+                 from external/libedgetpu/driver/registers/registers.h:18,
+                 from external/libedgetpu/driver/kernel/kernel_registers.h:22,
+                 from external/libedgetpu/driver/kernel/kernel_registers.cc:15:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling api/buffer.cc:
+external/libedgetpu/api/buffer.cc: In member function 'platforms::darwinn::StatusOr<std::shared_ptr<platforms::darwinn::DramBuffer> > platforms::darwinn::Buffer::GetDramBuffer()':
+external/libedgetpu/api/buffer.cc:143:65: warning: format '%d' expects argument of type 'int', but argument 2 has type 'platforms::darwinn::Buffer::Type' [-Wformat=]
+  143 |         StringPrintf("Called GetDramBuffer on a buffer of type %d.", type_));
+      |                                                                ~^    ~~~~~
+      |                                                                 |    |
+      |                                                                 int  platforms::darwinn::Buffer::Type
+external/libedgetpu/api/buffer.cc: In function 'std::ostream& platforms::darwinn::operator<<(std::ostream&, const Buffer::Type&)':
+external/libedgetpu/api/buffer.cc:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+  171 | }
+      | ^
+[74 / 106] Compiling driver/driver.cc; 7s linux-sandbox ... (24 actions, 23 running)
+INFO: From Compiling driver/executable_util.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/executable_util.h:23,
+                 from external/libedgetpu/driver/executable_util.cc:17:
+external/libedgetpu/driver/executable_util.cc: In function 'void platforms::darwinn::driver::{anonymous}::LinkBatchedAddress(platforms::darwinn::Description, const std::string&, const std::vector<long long unsigned int>&, const flatbuffers::Vector<flatbuffers::Offset<platforms::darwinn::FieldOffset> >*, platforms::darwinn::gtl::MutableArraySlice<unsigned char>)':
+external/libedgetpu/driver/executable_util.cc:88:17: warning: comparison of integer expressions of different signedness: 'const int' and 'std::vector<long long unsigned int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   88 |     CHECK(batch < addresses.size());
+      |           ~~~~~~^~~~~~~~~~~~~~~~~~
+external/libedgetpu/port/default/port_from_tf/macros.h:101:27: note: in definition of macro 'PREDICT_FALSE'
+  101 | #define PREDICT_FALSE(x) (x)
+      |                           ^
+external/libedgetpu/driver/executable_util.cc:88:5: note: in expansion of macro 'CHECK'
+   88 |     CHECK(batch < addresses.size());
+      |     ^~~~~
+INFO: From Compiling driver/request.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/driver/package_registry.h:28,
+                 from external/libedgetpu/driver/tpu_request.h:25,
+                 from external/libedgetpu/driver/request.h:19,
+                 from external/libedgetpu/driver/request.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/request.h:22,
+                 from external/libedgetpu/driver/request.h:18:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/driver/request.cc: In member function 'platforms::darwinn::Status platforms::darwinn::driver::Request::Prepare()':
+external/libedgetpu/driver/request.cc:131:30: warning: comparison of integer expressions of different signedness: 'std::vector<platforms::darwinn::Buffer>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  131 |     if (inputs_[name].size() != batch_size) {
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+external/libedgetpu/driver/request.cc:150:31: warning: comparison of integer expressions of different signedness: 'std::vector<platforms::darwinn::Buffer>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  150 |     if (outputs_[name].size() != batch_size) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+[76 / 106] Compiling driver/driver.cc; 8s linux-sandbox ... (24 actions running)
+INFO: From Compiling api/driver_factory.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/api/driver_factory.h:24,
+                 from external/libedgetpu/api/driver_factory.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling api/driver_options_helper.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/api/driver_options_helper.h:18,
+                 from external/libedgetpu/api/driver_options_helper.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling driver/driver.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/driver/driver.h:28,
+                 from external/libedgetpu/driver/driver.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/driver.h:26:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling tflite/custom_op.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/driver/package_registry.h:28,
+                 from external/libedgetpu/tflite/custom_op.h:18,
+                 from external/libedgetpu/tflite/custom_op.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/package_registry.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/tflite/custom_op.cc: In function 'platforms::darwinn::Status platforms::darwinn::tflite::{anonymous}::ValidateInputsAndOutputs(TfLiteContext*, TfLiteNode*, const platforms::darwinn::driver::ExecutableLayersInfo*)':
+external/libedgetpu/tflite/custom_op.cc:163:50: warning: comparison of integer expressions of different signedness: 'int' and 'const size_t' {aka 'const long unsigned int'} [-Wsign-compare]
+  163 |         input->dims->data[0] * single_input_size == input->bytes) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+external/libedgetpu/tflite/custom_op.cc:32:13: warning: comparison of integer expressions of different signedness: 'int' and 'const size_t' {aka 'const long unsigned int'} [-Wsign-compare]
+   32 |     if ((a) != (b)) {                                                          \
+      |         ~~~~^~~~~~
+external/libedgetpu/tflite/custom_op.cc:174:5: note: in expansion of macro 'RETURN_IF_NOT_EQ'
+  174 |     RETURN_IF_NOT_EQ(batches * single_input_size, input->bytes);
+      |     ^~~~~~~~~~~~~~~~
+external/libedgetpu/tflite/custom_op.cc:208:52: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+  208 |         output->dims->data[0] * single_output_size == output->bytes) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+external/libedgetpu/tflite/custom_op.cc:32:13: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+   32 |     if ((a) != (b)) {                                                          \
+      |         ~~~~^~~~~~
+external/libedgetpu/tflite/custom_op.cc:221:5: note: in expansion of macro 'RETURN_IF_NOT_EQ'
+  221 |     RETURN_IF_NOT_EQ(batches * single_output_size, output->bytes);
+      |     ^~~~~~~~~~~~~~~~
+[83 / 106] Compiling driver/package_registry.cc; 8s linux-sandbox ... (20 actions running)
+INFO: From Compiling api/tensor_util.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/logging.h:18,
+                 from external/libedgetpu/port/logging.h:26,
+                 from external/libedgetpu/api/tensor_util.h:23,
+                 from external/libedgetpu/api/tensor_util.cc:15:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: warning: "ABSL_MUST_USE_RESULT" redefined
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21:
+external/com_google_absl/absl/base/attributes.h:450: note: this is the location of the previous definition
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+external/libedgetpu/api/tensor_util.cc: In function 'platforms::darwinn::TensorShapeT platforms::darwinn::api::tensor_util::MakeTensorShape(const std::vector<int>&)':
+external/libedgetpu/api/tensor_util.cc:33:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   33 |   for (int i = 0; i < dimensions.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'platforms::darwinn::TensorShapeT platforms::darwinn::api::tensor_util::MakeTensorShape(const std::vector<platforms::darwinn::Range>&)':
+external/libedgetpu/api/tensor_util.cc:43:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   43 |   for (int i = 0; i < ranges.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'platforms::darwinn::TensorShapeT platforms::darwinn::api::tensor_util::GetIntersectShape(const platforms::darwinn::TensorShapeT&, const platforms::darwinn::TensorShapeT&)':
+external/libedgetpu/api/tensor_util.cc:54:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   54 |   for (int i = 0; i < one.dimension.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsValidShape(const platforms::darwinn::TensorShape&)':
+external/libedgetpu/api/tensor_util.cc:67:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   67 |   for (int i = 0; i < shape.dimension()->size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsValidShape(const platforms::darwinn::TensorShapeT&)':
+external/libedgetpu/api/tensor_util.cc:80:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   80 |   for (int i = 0; i < shape.dimension.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'int platforms::darwinn::api::tensor_util::GetNumElementsInShape(const platforms::darwinn::TensorShape&)':
+external/libedgetpu/api/tensor_util.cc:90:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   90 |   for (int i = 0; i < shape.dimension()->size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'int platforms::darwinn::api::tensor_util::GetNumElementsInShape(const platforms::darwinn::TensorShapeT&)':
+external/libedgetpu/api/tensor_util.cc:101:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  101 |   for (int i = 0; i < shape.dimension.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsElementInShape(const platforms::darwinn::TensorShape&, const std::vector<int>&)':
+external/libedgetpu/api/tensor_util.cc:123:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  123 |   for (int i = 0; i < shape.dimension()->size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsElementInShape(const platforms::darwinn::TensorShapeT&, const std::vector<int>&)':
+external/libedgetpu/api/tensor_util.cc:135:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  135 |   for (int i = 0; i < shape.dimension.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsValidLayout(const platforms::darwinn::TensorLayout&)':
+external/libedgetpu/api/tensor_util.cc:185:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  185 |   for (int i = 0; i < shape.dimension()->size() - 1; ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsValidLayout(const platforms::darwinn::TensorLayoutT&)':
+external/libedgetpu/api/tensor_util.cc:201:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  201 |   for (int i = 0; i < shape.dimension.size() - 1; ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsNoPaddingLayout(const platforms::darwinn::TensorLayout&)':
+external/libedgetpu/api/tensor_util.cc:216:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  216 |   for (int i = 0; i < shape.dimension()->size() - 1; ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'bool platforms::darwinn::api::tensor_util::IsNoPaddingLayout(const platforms::darwinn::TensorLayoutT&)':
+external/libedgetpu/api/tensor_util.cc:230:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  230 |   for (int i = 0; i < shape.dimension.size() - 1; ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'int platforms::darwinn::api::tensor_util::GetMemoryIndexFromPosition(const platforms::darwinn::TensorLayout&, const std::vector<int>&)':
+external/libedgetpu/api/tensor_util.cc:253:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  253 |   for (int i = 0; i < position.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'int platforms::darwinn::api::tensor_util::GetMemoryIndexFromPosition(const platforms::darwinn::TensorLayoutT&, const std::vector<int>&)':
+external/libedgetpu/api/tensor_util.cc:265:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  265 |   for (int i = 0; i < position.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'int platforms::darwinn::api::tensor_util::GetFirstMemoryIndexForShape(const platforms::darwinn::TensorLayout&, const platforms::darwinn::TensorShapeT&)':
+external/libedgetpu/api/tensor_util.cc:276:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  276 |   for (int i = 0; i < shape.dimension.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'int platforms::darwinn::api::tensor_util::GetLastMemoryIndexForShape(const platforms::darwinn::TensorLayout&, const platforms::darwinn::TensorShapeT&)':
+external/libedgetpu/api/tensor_util.cc:285:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  285 |   for (int i = 0; i < shape.dimension.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'std::string platforms::darwinn::api::tensor_util::DumpShape(const platforms::darwinn::TensorShape&)':
+external/libedgetpu/api/tensor_util.cc:300:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  300 |   for (int i = 0; i < shape.dimension()->size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'std::string platforms::darwinn::api::tensor_util::DumpShape(const platforms::darwinn::TensorShapeT&)':
+external/libedgetpu/api/tensor_util.cc:309:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Range>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  309 |   for (int i = 0; i < shape.dimension.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'std::string platforms::darwinn::api::tensor_util::DumpLayout(const platforms::darwinn::TensorLayout&)':
+external/libedgetpu/api/tensor_util.cc:320:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  320 |   for (int i = 0; i < layout.stride()->size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'std::string platforms::darwinn::api::tensor_util::DumpLayout(const platforms::darwinn::TensorLayoutT&)':
+external/libedgetpu/api/tensor_util.cc:332:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  332 |   for (int i = 0; i < layout.stride.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/tensor_util.cc: In function 'platforms::darwinn::TensorShapeT platforms::darwinn::api::tensor_util::GetMinimumBoundingShape(const std::vector<const platforms::darwinn::TensorShape*>&)':
+external/libedgetpu/api/tensor_util.cc:347:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<const platforms::darwinn::TensorShape*>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  347 |   for (int i = 0; i < shapes.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~
+[87 / 106] Compiling driver/package_registry.cc; 9s linux-sandbox ... (16 actions running)
+INFO: From Compiling api/layer_information.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/layer_information.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/layer_information.h:20:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/api/layer_information.cc: In function 'platforms::darwinn::Status platforms::darwinn::api::{anonymous}::SanityCheckShapeInformation(const platforms::darwinn::OutputShapeInfo&, int)':
+external/libedgetpu/api/layer_information.cc:41:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   41 |   for (int i = 0; i < shape_info.slice_layout()->size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc: In member function 'platforms::darwinn::Status platforms::darwinn::api::LayerInformation::TransformSignedDataType(platforms::darwinn::Buffer) const':
+external/libedgetpu/api/layer_information.cc:129:27: warning: comparison of integer expressions of different signedness: 'size_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  129 |   if (buffer.size_bytes() < ActualSizeBytes()) {
+      |       ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc: In member function 'platforms::darwinn::Status platforms::darwinn::api::OutputLayerInformation::Relayout(unsigned char*, const unsigned char*) const':
+external/libedgetpu/api/layer_information.cc:297:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  297 |       for (int x_tile = 0; x_tile < active_tile_x_sizes.size(); ++x_tile) {   \
+      |                            ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc:324:9: note: in expansion of macro 'RELAYOUT_WITH_Z_BYTES_SPECIALIZATION'
+  324 |         RELAYOUT_WITH_Z_BYTES_SPECIALIZATION(1, 4);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc:297:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  297 |       for (int x_tile = 0; x_tile < active_tile_x_sizes.size(); ++x_tile) {   \
+      |                            ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc:327:9: note: in expansion of macro 'RELAYOUT_WITH_Z_BYTES_SPECIALIZATION'
+  327 |         RELAYOUT_WITH_Z_BYTES_SPECIALIZATION(3, 4);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc:297:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  297 |       for (int x_tile = 0; x_tile < active_tile_x_sizes.size(); ++x_tile) {   \
+      |                            ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc:330:9: note: in expansion of macro 'RELAYOUT_WITH_Z_BYTES_SPECIALIZATION'
+  330 |         RELAYOUT_WITH_Z_BYTES_SPECIALIZATION(z_bytes, z_bytes_padded);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc:355:39: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  355 |           for (int x_tile = 0; x_tile < active_tile_x_sizes.size(); ++x_tile) {
+      |                                ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc: In member function 'platforms::darwinn::Status platforms::darwinn::api::OutputLayerInformation::RelayoutWithShapeInformation(unsigned char*, const unsigned char*) const':
+external/libedgetpu/api/layer_information.cc:397:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  397 |   for (int i = 0; i < slice_layouts.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc: In member function 'platforms::darwinn::TensorShapeT platforms::darwinn::api::OutputLayerInformation::GetMergedOutputShape() const':
+external/libedgetpu/api/layer_information.cc:417:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  417 |   for (int i = 0; i < slice_layouts.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc: In member function 'int platforms::darwinn::api::OutputLayerInformation::GetBufferIndex(const std::vector<int>&) const':
+external/libedgetpu/api/layer_information.cc:457:21: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  457 |   for (int i = 0; i < slice_layouts.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/api/layer_information.cc: In member function 'bool platforms::darwinn::api::LayerInformation::SignedDataType() const':
+external/libedgetpu/api/layer_information.cc:125:1: warning: control reaches end of non-void function [-Wreturn-type]
+  125 | }
+      | ^
+external/libedgetpu/api/layer_information.cc: In function 'int platforms::darwinn::api::TensorDataTypeSize(platforms::darwinn::DataType)':
+external/libedgetpu/api/layer_information.cc:511:1: warning: control reaches end of non-void function [-Wreturn-type]
+  511 | }
+      | ^
+INFO: From Compiling driver/single_tpu_request.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/driver/package_registry.h:28,
+                 from external/libedgetpu/driver/dma_info_extractor.h:22,
+                 from external/libedgetpu/driver/single_tpu_request.h:33,
+                 from external/libedgetpu/driver/single_tpu_request.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/single_tpu_request.h:28:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/driver/single_tpu_request.cc: In member function 'virtual platforms::darwinn::Status platforms::darwinn::driver::SingleTpuRequest::AddInput(const std::string&, const platforms::darwinn::Buffer&)':
+external/libedgetpu/driver/single_tpu_request.cc:121:31: warning: comparison of integer expressions of different signedness: 'size_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  121 |       host_input.size_bytes() != layer->PaddedSizeBytes()) {
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/single_tpu_request.cc: In member function 'virtual platforms::darwinn::Status platforms::darwinn::driver::SingleTpuRequest::Validate()':
+external/libedgetpu/driver/single_tpu_request.cc:329:38: warning: comparison of integer expressions of different signedness: 'std::vector<platforms::darwinn::Buffer>::size_type' {aka 'long unsigned int'} and 'int32_t' {aka 'int'} [-Wsign-compare]
+  329 |     if (name_and_input.second.size() != executable().batch_size()) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/single_tpu_request.cc:339:39: warning: comparison of integer expressions of different signedness: 'std::vector<platforms::darwinn::Buffer>::size_type' {aka 'long unsigned int'} and 'int32_t' {aka 'int'} [-Wsign-compare]
+  339 |     if (name_and_output.second.size() != executable().batch_size()) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/single_tpu_request.cc: In member function 'platforms::darwinn::Status platforms::darwinn::driver::SingleTpuRequest::PostProcessOutputBuffers()':
+external/libedgetpu/driver/single_tpu_request.cc:558:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::Buffer>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  558 |     for (int i = 0; i < user_output_buffers.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[91 / 106] Compiling driver/package_registry.cc; 10s linux-sandbox ... (12 actions running)
+INFO: From Compiling tflite/custom_op_user_data_direct.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24,
+                 from external/libedgetpu/tflite/custom_op_user_data_direct.h:21,
+                 from external/libedgetpu/tflite/custom_op_user_data_direct.cc:15:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: warning: "ABSL_MUST_USE_RESULT" redefined
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+In file included from external/com_google_absl/absl/base/macros.h:34,
+                 from external/com_google_absl/absl/algorithm/container.h:54,
+                 from external/com_google_absl/absl/container/flat_hash_map.h:38,
+                 from external/libedgetpu/tflite/custom_op_user_data_direct.h:20:
+external/com_google_absl/absl/base/attributes.h:450: note: this is the location of the previous definition
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+INFO: From Compiling driver/package_registry.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/driver/package_registry.h:28,
+                 from external/libedgetpu/driver/package_registry.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/package_registry.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/driver/package_registry.cc: In member function 'const platforms::darwinn::api::InputLayerInformation* platforms::darwinn::driver::ExecutableLayersInfo::InputLayer(int) const':
+external/libedgetpu/driver/package_registry.cc:477:13: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::api::InputLayerInformation>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  477 |   if (index < inputs_.size()) {
+      |       ~~~~~~^~~~~~~~~~~~~~~~
+external/libedgetpu/driver/package_registry.cc: In member function 'const platforms::darwinn::api::OutputLayerInformation* platforms::darwinn::driver::ExecutableLayersInfo::OutputLayer(int) const':
+external/libedgetpu/driver/package_registry.cc:485:13: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<platforms::darwinn::api::OutputLayerInformation>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  485 |   if (index < outputs_.size()) {
+      |       ~~~~~~^~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/package_registry.cc: In member function 'platforms::darwinn::Status platforms::darwinn::driver::ExecutableReference::ValidateInput(const std::string&, const platforms::darwinn::Buffer&) const':
+external/libedgetpu/driver/package_registry.cc:606:26: warning: comparison of integer expressions of different signedness: 'size_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  606 |   if (input.size_bytes() != layer->ActualSizeBytes() &&
+      |       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/package_registry.cc:607:26: warning: comparison of integer expressions of different signedness: 'size_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  607 |       input.size_bytes() != layer->PaddedSizeBytes()) {
+      |       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/package_registry.cc: In member function 'platforms::darwinn::Status platforms::darwinn::driver::ExecutableReference::ValidateOutput(const std::string&, const platforms::darwinn::Buffer&) const':
+external/libedgetpu/driver/package_registry.cc:621:27: warning: comparison of integer expressions of different signedness: 'size_t' {aka 'long unsigned int'} and 'const int' [-Wsign-compare]
+  621 |   if (output.size_bytes() != expected_size_bytes) {
+      |       ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+[93 / 106] Compiling driver/mmio_driver.cc; 8s linux-sandbox ... (10 actions running)
+INFO: From Compiling driver/beagle/beagle_pci_driver_provider_linux.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/driver/beagle/beagle_pci_driver_provider.h:19,
+                 from external/libedgetpu/driver/beagle/beagle_pci_driver_provider_linux.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling tflite/custom_op_direct.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/tflite/custom_op_direct.cc:18:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+[95 / 106] Compiling driver/mmio_driver.cc; 9s linux-sandbox ... (8 actions running)
+INFO: From Compiling driver/mmio_driver.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/driver/package_registry.h:28,
+                 from external/libedgetpu/driver/dma_info_extractor.h:22,
+                 from external/libedgetpu/driver/mmio_driver.h:32,
+                 from external/libedgetpu/driver/mmio_driver.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/mmio_driver.h:25:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+In file included from external/libedgetpu/port/status_macros.h:24,
+                 from external/libedgetpu/driver/device_buffer_mapper.h:27,
+                 from external/libedgetpu/driver/dma_info_extractor.h:20:
+external/libedgetpu/driver/mmio_driver.cc: In lambda function:
+external/libedgetpu/driver/mmio_driver.cc:186:27: warning: comparison of integer expressions of different signedness: 'int' and 'platforms::darwinn::uint64' {aka 'long long unsigned int'} [-Wsign-compare]
+  186 |         for (int i = 0; i < count; ++i) {
+      |                         ~~^~~~~~~
+external/libedgetpu/port/default/status_macros.h:227:51: note: in definition of macro 'RETURN_IF_ERROR'
+  227 |     const ::platforms::darwinn::Status _status = (expr); \
+      |                                                   ^~~~
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long unsigned int]'
+external/libedgetpu/driver/mmio/host_queue.h:293:37:   required from 'platforms::darwinn::Status platforms::darwinn::driver::HostQueue<Element, StatusBlock>::Open(platforms::darwinn::driver::AddressSpace*) [with Element = platforms::darwinn::driver::HostQueueDescriptor; StatusBlock = platforms::darwinn::driver::HostQueueStatusBlock; platforms::darwinn::Status = platforms::darwinn::Status]'
+external/libedgetpu/driver/mmio_driver.cc:311:3:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+[97 / 106] Compiling tflite/edgetpu_context_direct.cc; 9s linux-sandbox ... (6 actions running)
+INFO: From Compiling tflite/edgetpu_context_direct.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/tflite/edgetpu_context_direct.h:20,
+                 from external/libedgetpu/tflite/edgetpu_context_direct.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling tflite/edgetpu_manager_direct.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/tflite/edgetpu_context_direct.h:20,
+                 from external/libedgetpu/tflite/edgetpu_manager_direct.h:21,
+                 from external/libedgetpu/tflite/edgetpu_manager_direct.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+INFO: From Compiling driver/beagle/beagle_usb_driver_provider.cc:
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24,
+                 from external/libedgetpu/driver/beagle/beagle_usb_driver_provider.cc:28:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: warning: "ABSL_MUST_USE_RESULT" redefined
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+In file included from external/com_google_absl/absl/base/macros.h:34,
+                 from external/com_google_absl/absl/base/casts.h:37,
+                 from external/com_google_absl/absl/base/internal/endian.h:22,
+                 from external/com_google_absl/absl/strings/numbers.h:43,
+                 from external/libedgetpu/driver/beagle/beagle_usb_driver_provider.cc:24:
+external/com_google_absl/absl/base/attributes.h:450: note: this is the location of the previous definition
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/driver/usb/usb_driver.h:34,
+                 from external/libedgetpu/driver/beagle/beagle_usb_driver_provider.cc:45:
+external/libedgetpu/driver/dma_chunker.h: In member function 'bool platforms::darwinn::driver::DmaChunker::HasNextChunk() const':
+external/libedgetpu/driver/dma_chunker.h:54:33: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+   54 |     return GetNextChunkOffset() < buffer_.size_bytes();
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/dma_chunker.h: In member function 'int platforms::darwinn::driver::DmaChunker::GetActiveCounts(int) const':
+external/libedgetpu/driver/dma_chunker.h:79:37: warning: comparison of integer expressions of different signedness: 'int' and 'const size_t' {aka 'const long unsigned int'} [-Wsign-compare]
+   79 |     return floor + ((floor * bytes) < active_bytes_);
+      |                     ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+[100 / 106] Compiling driver/usb/usb_driver.cc; 10s linux-sandbox ... (3 actions running)
+INFO: From Compiling driver/usb/usb_driver.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/driver/package_registry.h:28,
+                 from external/libedgetpu/driver/dma_info_extractor.h:22,
+                 from external/libedgetpu/driver/usb/usb_driver.h:36,
+                 from external/libedgetpu/driver/usb/usb_driver.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/driver/usb/usb_driver.h:25:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+In file included from external/libedgetpu/driver/usb/usb_driver.h:34:
+external/libedgetpu/driver/dma_chunker.h: In member function 'bool platforms::darwinn::driver::DmaChunker::HasNextChunk() const':
+external/libedgetpu/driver/dma_chunker.h:54:33: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+   54 |     return GetNextChunkOffset() < buffer_.size_bytes();
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/driver/dma_chunker.h: In member function 'int platforms::darwinn::driver::DmaChunker::GetActiveCounts(int) const':
+external/libedgetpu/driver/dma_chunker.h:79:37: warning: comparison of integer expressions of different signedness: 'int' and 'const size_t' {aka 'const long unsigned int'} [-Wsign-compare]
+   79 |     return floor + ((floor * bytes) < active_bytes_);
+      |                     ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+external/libedgetpu/driver/usb/usb_driver.cc: In member function 'void platforms::darwinn::driver::UsbDriver::WorkerThreadFunc()':
+external/libedgetpu/driver/usb/usb_driver.cc:1190:45: warning: comparison of integer expressions of different signedness: 'std::queue<int>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+ 1190 |       if (available_bulk_in_buffers_.size() ==
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+ 1191 |           options_.usb_bulk_in_queue_capacity) {
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long long unsigned int]'
+external/libedgetpu/driver/memory/address_utilities.h:57:31:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+INFO: From Compiling driver/beagle/beagle_pci_driver_provider.cc:
+In file included from external/com_google_absl/absl/meta/type_traits.h:42,
+                 from external/com_google_absl/absl/utility/utility.h:51,
+                 from external/com_google_absl/absl/types/optional.h:39,
+                 from external/libedgetpu/api/tensor_util.h:21,
+                 from external/libedgetpu/api/layer_information.h:21,
+                 from external/libedgetpu/api/package_reference.h:24,
+                 from external/libedgetpu/api/driver.h:25,
+                 from external/libedgetpu/driver/beagle/beagle_pci_driver_provider.h:19,
+                 from external/libedgetpu/driver/beagle/beagle_pci_driver_provider.cc:15:
+external/com_google_absl/absl/base/attributes.h:450: warning: "ABSL_MUST_USE_RESULT" redefined
+  450 | #define ABSL_MUST_USE_RESULT
+      | 
+In file included from external/libedgetpu/port/default/port_from_tf/logging.h:45,
+                 from external/libedgetpu/port/default/port_from_tf/status.h:26,
+                 from external/libedgetpu/port/default/status.h:18,
+                 from external/libedgetpu/port/status.h:25,
+                 from external/libedgetpu/api/dram_buffer.h:18,
+                 from external/libedgetpu/api/buffer.h:25,
+                 from external/libedgetpu/api/driver.h:24:
+external/libedgetpu/port/default/port_from_tf/macros.h:65: note: this is the location of the previous definition
+   65 | #define ABSL_MUST_USE_RESULT __attribute__((warn_unused_result))
+      | 
+external/libedgetpu/port/default/port_from_tf/math_util.h: In instantiation of 'static IntegralType platforms::darwinn::MathUtil::CeilOrFloorOfRatio(IntegralType, IntegralType) [with IntegralType = long unsigned int; bool ceil = true]':
+external/libedgetpu/port/default/port_from_tf/math_util.h:54:50:   required from 'static IntegralType platforms::darwinn::MathUtil::CeilOfRatio(IntegralType, IntegralType) [with IntegralType = long unsigned int]'
+external/libedgetpu/driver/mmio/host_queue.h:293:37:   required from 'platforms::darwinn::Status platforms::darwinn::driver::HostQueue<Element, StatusBlock>::Open(platforms::darwinn::driver::AddressSpace*) [with Element = platforms::darwinn::driver::HostQueueDescriptor; StatusBlock = platforms::darwinn::driver::HostQueueStatusBlock; platforms::darwinn::Status = platforms::darwinn::Status]'
+external/libedgetpu/driver/mmio/host_queue.h:272:8:   required from here
+external/libedgetpu/port/default/port_from_tf/math_util.h:83:22: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
+   83 |          denominator != -1)
+      |          ~~~~~~~~~~~~^~~~~
+external/libedgetpu/port/default/port_from_tf/logging.h:279:20: note: in definition of macro 'DCHECK'
+  279 |   while (false && (condition)) LOG(FATAL)
+      |                    ^~~~~~~~~
+[102 / 106] Compiling src/coral_wrapper.cc; 7s linux-sandbox
+INFO: From Compiling src/coral_wrapper.cc:
+In file included from bazel-out/k8-opt/bin/external/pypi_numpy/_virtual_includes/numpy_headers/numpy/ndarraytypes.h:1929,
+                 from bazel-out/k8-opt/bin/external/pypi_numpy/_virtual_includes/numpy_headers/numpy/ndarrayobject.h:12,
+                 from bazel-out/k8-opt/bin/external/pypi_numpy/_virtual_includes/numpy_headers/numpy/arrayobject.h:5,
+                 from src/coral_wrapper.cc:30:
+bazel-out/k8-opt/bin/external/pypi_numpy/_virtual_includes/numpy_headers/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from external/org_tensorflow/tensorflow/lite/core/subgraph.h:39,
+                 from external/org_tensorflow/tensorflow/lite/core/async/async_subgraph.h:27,
+                 from external/org_tensorflow/tensorflow/lite/core/async/async_signature_runner.h:24,
+                 from external/org_tensorflow/tensorflow/lite/core/interpreter.h:45,
+                 from external/org_tensorflow/tensorflow/lite/core/interpreter_builder.h:38,
+                 from external/org_tensorflow/tensorflow/lite/interpreter_builder.h:20,
+                 from external/org_tensorflow/tensorflow/lite/model.h:20,
+                 from external/libcoral/coral/learn/backprop/softmax_regression_model.h:24,
+                 from src/coral_wrapper.cc:44:
+external/org_tensorflow/tensorflow/lite/graph_info.h:125:1: warning: multi-line comment [-Wcomment]
+  125 | //                    /------------\
+      | ^
+external/org_tensorflow/tensorflow/lite/graph_info.h:137:1: warning: multi-line comment [-Wcomment]
+  137 | //                    /------------\
+      | ^
+src/coral_wrapper.cc: In lambda function:
+src/coral_wrapper.cc:455:27: warning: comparison of integer expressions of different signedness: 'int' and 'pybind11::size_t' {aka 'long unsigned int'} [-Wsign-compare]
+  455 |         for (int i = 0; i < list.size(); ++i) {
+      |                         ~~^~~~~~~~~~~~~
+src/coral_wrapper.cc: At global scope:
+src/coral_wrapper.cc:102:12: warning: 'pybind11::object {anonymous}::Pyo(PyObject*)' defined but not used [-Wunused-function]
+  102 | py::object Pyo(PyObject* ptr) { return py::reinterpret_steal<py::object>(ptr); }
+      |            ^~~
+[103 / 106] [Prepa] Compiling port/default/builddata.cc
+Target //src:_pywrap_coral up-to-date (nothing to build)
+INFO: Elapsed time: 25.792s, Critical Path: 14.87s
+INFO: 104 processes: 2 internal, 102 linux-sandbox.
+INFO: Build completed successfully, 104 total actions

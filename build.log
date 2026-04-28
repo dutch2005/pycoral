@@ -1,0 +1,40 @@
+Loading: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //src:_pywrap_coral (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //src:_pywrap_coral (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 2] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[1 / 350] Compiling src/idl_parser.cpp [for tool]; 1s linux-sandbox ... (24 actions running)
+[2 / 350] Compiling src/idl_parser.cpp [for tool]; 2s linux-sandbox ... (24 actions running)
+[3 / 350] Compiling src/idl_parser.cpp [for tool]; 5s linux-sandbox ... (24 actions, 23 running)
+[3 / 350] Compiling src/idl_parser.cpp [for tool]; 7s linux-sandbox ... (24 actions running)
+[4 / 350] Compiling src/idl_parser.cpp [for tool]; 8s linux-sandbox ... (24 actions running)
+ERROR: /home/ubuntu/.cache/bazel/_bazel_ubuntu/239ae1ce73be6bae0635c62c3844b6fc/external/libcoral/coral/learn/backprop/BUILD:21:11: Compiling coral/learn/backprop/layers.cc failed: (Exit 1): gcc failed: error executing command (from target @libcoral//coral/learn/backprop:layers) /usr/bin/gcc -U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer -g0 -O2 '-D_FORTIFY_SOURCE=1' -DNDEBUG -ffunction-sections ... (remaining 38 arguments skipped)
+
+Use --sandbox_debug to see verbose messages from the sandbox and retain the sandbox build root for debugging
+external/libcoral/coral/learn/backprop/layers.cc: In function 'Eigen::MatrixXf coral::FullyConnected(const Eigen::MatrixXf&, const Eigen::MatrixXf&, const Eigen::MatrixXf&)':
+external/libcoral/coral/learn/backprop/layers.cc:43:54: error: 'all' is not a member of 'Eigen'
+   43 |   mat_y.array().rowwise() += mat_b.array()(0, Eigen::all);
+      |                                                      ^~~
+external/libcoral/coral/learn/backprop/layers.cc:43:54: note: suggested alternatives:
+In file included from external/eigen_archive/Eigen/Core:19,
+                 from external/libcoral/coral/learn/backprop/layers.h:21,
+                 from external/libcoral/coral/learn/backprop/layers.cc:16:
+external/eigen_archive/Eigen/src/Core/util/Macros.h:1274:24: note:   'Eigen::internal::all'
+ 1274 | EIGEN_DEVICE_FUNC bool all(T t, Ts ... ts){ return t && all(ts...); }
+      |                        ^~~
+In file included from external/eigen_archive/Eigen/Core:285:
+external/eigen_archive/Eigen/src/Core/util/IndexedViewHelper.h:190:37: note:   'Eigen::placeholders::all'
+  190 | static const Eigen::internal::all_t all;
+      |                                     ^~~
+external/eigen_archive/Eigen/src/Core/util/IndexedViewHelper.h:190:37: note:   'Eigen::placeholders::all'
+external/libcoral/coral/learn/backprop/layers.cc: In function 'void coral::SgdUpdate(const std::vector<Eigen::Matrix<float, -1, -1> >&, float, std::vector<Eigen::Matrix<float, -1, -1>*>)':
+external/libcoral/coral/learn/backprop/layers.cc:93:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Eigen::Matrix<float, -1, -1>*>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   93 |   for (int i = 0; i < weights.size(); i++)
+      |                   ~~^~~~~~~~~~~~~~~~
+Target //src:_pywrap_coral failed to build
+Use --verbose_failures to see the command lines of failed build steps.
+INFO: Elapsed time: 8.678s, Critical Path: 10.60s
+INFO: 28 processes: 25 internal, 3 linux-sandbox.
+FAILED: Build did NOT complete successfully
